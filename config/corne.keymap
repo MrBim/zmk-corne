@@ -11,21 +11,6 @@
 / {
         keymap {
                 compatible = "zmk,keymap";
-
-//                default_layer {
-// ----------------------------------- COLEMAK -------------------------------------------------
-// | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
-// | TAB  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
-// | CTRL |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | ALT  |
-//                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
-//                        bindings = <
-//   &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-//   &kp TAB   &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O &kp SQT
-//   &kp LCTRL &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp LALT
-//                   &kp LGUI &to 1 &kp RET   &kp SPACE &to 2 &kp RSHFT 
-//                   &out OUT_BLE
-//                        >;
-//                };
                 default_layer {
 // ----------------------------------- QWERTY -------------------------------------------------
 // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
@@ -33,10 +18,10 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ALT  |
 //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-                   &kp LGUI &to 1 &kp RET   &kp SPACE &to 2 &kp RSHFT 
+   &kp ESC   &kp Q &kp W    &kp E    &kp R     &kp T      &kp Y     &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp TAB   &kp A &kp S    &kp D    &kp F     &kp G      &kp H     &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp Z &kp X    &kp C    &kp V     &kp B      &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
+                   &kp LGUI &to 1    &kp RET              &kp SPACE &to 2  &kp RSHFT 
                    &out OUT_BLE
                         >;
                 };
@@ -47,10 +32,10 @@
 // |      |  ~  |  _  |  #  |  %  | "|" |   |  [  |  ]  |  <  |  >  |     |      |
 //                    | GUI |     | SPC |   | ENT | RSE | ALT |
                         bindings = <
-   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8   &kp N9   &kp N0 &trans
-   &trans    &kp BSLH     &kp AMPS     &kp PLUS     &kp MINUS    &kp EQUAL      &kp LPAR &kp RPAR &kp LBRC &kp RBRC &trans &trans
-   &trans    &kp TILDE    &kp UNDER    &kp HASH     &kp PRCNT    &PIPE          &kp LBKT &kp RBKT &kp LG   &kp GT   &trans &trans
-                          	       &kp LGUI     &to 0  &kp RET              &kp SPC  &to 2   &kp RALT
+   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7   &kp N8   &kp N9   &kp N0 &trans
+   &trans    &kp BSLH     &kp AMPS     &kp PLUS     &kp MINUS    &kp EQUAL      &kp LPAR  &kp RPAR &kp LBRC &kp RBRC &trans &trans
+   &trans    &kp TILDE    &kp UNDER    &kp HASH     &kp PRCNT    &PIPE          &kp LBKT  &kp RBKT &kp LG   &kp GT   &trans &trans
+                          	       &kp LGUI     &to 0        &kp RET        &kp SPACE &to 2   &kp RALT
                         >;
                 };
  
@@ -61,10 +46,10 @@
 // |      |     |     |     |     |     |   |     | LFT | DWN | RGT |     |      |
 //                    | GUI | LWR | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans    &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR  &trans
-   &trans    &trans   &trans &trans   &trans   &trans      &trans    &kp HOME  &UP             &kp END   &trans   &trans 
+   &trans    &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &trans
+   &trans    &trans   &trans &trans   &trans   &trans      &trans    &kp HOME  &kp UP          &kp END   &trans   &trans 
    &trans    &trans   &trans &trans   &trans   &trans      &trans    &kp LEFT  &kp DOWN        &kp RIGHT &trans   &trans
-                    	     &kp LGUI &to 1    &kp RET     &kp SPC   &to 0     &kp RALT
+                    	     &kp LGUI &to 1    &kp RET     &kp SPACE &to 0     &kp RALT
                         >;
                 };
         };
