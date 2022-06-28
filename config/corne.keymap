@@ -43,7 +43,7 @@
 // |      |  `  |  _  |  #  |  %  | "|" |   |  >  |  }  |  )  |  ]  |     |      |
 //                    | GUI |     | SPC |   | ENT | RSE | ALT |
                         bindings = <
-    &trans    &TD LS(N1) N1 &td LS(N2) N2 &td LS(N3) N3 &td LS(N4) N4        &td LS(N5) N5      &td LS(N6) N6 &td LS(N7) N7 &td LS(N8) N8 &td LS(N9) N9 &td LS(N0) N0 &trans
+    &trans    &td LS(N1) N1 &td LS(N2) N2 &td LS(N3) N3 &td LS(N4) N4        &td LS(N5) N5      &td LS(N6) N6 &td LS(N7) N7 &td LS(N8) N8 &td LS(N9) N9 &td LS(N0) N0 &trans
     &trans    &kp BSLH      &kp AMPS      &kp PLUS      &kp MINUS            &kp EQUAL          &td GT LT     &td RPAR LPAR &td RBKT LBKT &td RBRC LBRC &trans        &trans
     &trans    &kp GRAVE     &kp UNDER     &kp HASH      &kp PRCNT            &kp PIPE           &trans        &trans        &trans        &kp RBRC      &trans        &trans
                           	          &trans        &to 2                &trans             &trans        &to 0         &trans
