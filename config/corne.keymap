@@ -32,7 +32,7 @@
    &kp ESC   &kp Q &kp W    &kp E    &kp R     &kp T      &kp Y         &kp U  &kp I     &kp O      &kp P                &kp BSPC
    &kp TAB   &kp A &kp S    &kp D    &kp F     &kp G      &kp H         &kp J  &kp K     &kp L      &td LS(SEMI) SEMI    &td LS(SQT) SQT
    &kp LCTRL &kp Z &kp X    &kp C    &kp V     &kp B      &kp N         &kp M  &kp COMMA &kp DOT    &td LS(FSLH) FSLH    &kp LALT
-                   &kp RET  &to 1    &kp LGUI             &td RET SPACE &to 0  &kp RSHFT 
+                   &kp RET  &to 1    &kp LGUI             &kp SPACE &to 0  &kp RSHFT 
                    &out OUT_BLE
       >;
     };
@@ -52,15 +52,15 @@
  
     raise_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     | HOME| UP  | END |     |      |
-// |      |     |     |     |     |     |   |     | LFT | DWN | RGT |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// | BTC  |     |     |     |     |     |   |     | HOME| UP  | END |     |power toggle|
+// | BT1  |     |     |     |     |     |   |     | LFT | DWN | RGT |     |      |
+// | BT2  |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI | LWR | SPC |   | ENT |     | ALT |
       bindings = <
-   &trans    &trans       &trans       &trans       &trans    &trans         &trans    &kp HOME  &kp UP   &kp END   &trans   &trans
-   &trans    &trans       &trans       &trans       &trans    &trans         &trans    &kp LEFT  &kp DOWN &kp RIGHT &trans   &trans 
-   &trans    &trans       &trans       &trans       &trans    &trans         &trans    &trans    &trans   &trans    &trans   &trans
-                    	               &trans       &to 1     &trans         &trans    &to 0     &trans
+   &bt BT_CLR   &trans       &trans       &trans       &trans    &trans         &trans    &kp HOME  &kp UP   &kp END   &trans   &ext_power EP_TOG
+   &bt BT_SEL 0 &trans       &trans       &trans       &trans    &trans         &trans    &kp LEFT  &kp DOWN &kp RIGHT &trans   &trans 
+   &bt BT_SEL 1 &trans       &trans       &trans       &trans    &trans         &trans    &trans    &trans   &trans    &trans   &trans
+                          	              &trans       &to 1     &trans         &trans    &to 0     &trans
       >;
     };
   };
