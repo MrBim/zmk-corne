@@ -29,61 +29,61 @@
         compatible = "zmk,combos";
 
         combo_caps_word {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&caps_word>;
             key-positions = <17 18>;
         };
 
         combo_esc {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&kp ESC>;
             key-positions = <2 3>;
         };
 
         combo_tab {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&kp TAB>;
             key-positions = <14 15>;
         };
 
         combo_lhand_ctrl {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&kp LCTRL>;
             key-positions = <26 28>;
         };
 
         combo_rhand_ctrl {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&kp LCTRL>;
             key-positions = <31 33>;
         };
 
         combo_backspace {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
         };
 
         combo_quotes {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&td DOUBLE_QUOTES SINGLE_QUOTE>;
             key-positions = <20 21>;
         };
 
         combo_lhand_shift {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&kp LSHFT>;
             key-positions = <16 15>;
         };
 
         combo_rhand_shift {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&kp LSHIFT>;
             key-positions = <19 20>;
         };
 
         new_combo {
-            timeout-ms = 100;
+            timeout-ms = <100>;
             bindings = <&kp CAPSLOCK>;
             key-positions = <15 16 19 20>;
         };
