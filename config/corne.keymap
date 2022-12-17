@@ -28,52 +28,62 @@
     combos {
         compatible = "zmk,combos";
 
-        new_combo {
+        combo_caps_word {
+            timeout-ms = 100;
             bindings = <&caps_word>;
             key-positions = <17 18>;
         };
 
-        new_combo {
+        combo_esc {
+            timeout-ms = 100;
             bindings = <&kp ESC>;
             key-positions = <2 3>;
         };
 
-        new_combo {
+        combo_tab {
+            timeout-ms = 100;
             bindings = <&kp TAB>;
             key-positions = <14 15>;
         };
 
-        new_combo {
+        combo_lhand_ctrl {
+            timeout-ms = 100;
             bindings = <&kp LCTRL>;
             key-positions = <26 28>;
         };
 
-        new_combo {
+        combo_rhand_ctrl {
+            timeout-ms = 100;
             bindings = <&kp LCTRL>;
             key-positions = <31 33>;
         };
 
-        new_combo {
+        combo_backspace {
+            timeout-ms = 100;
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
         };
 
-        new_combo {
+        combo_quotes {
+            timeout-ms = 100;
             bindings = <&td DOUBLE_QUOTES SINGLE_QUOTE>;
             key-positions = <20 21>;
         };
 
-        new_combo {
+        combo_lhand_shift {
+            timeout-ms = 100;
             bindings = <&kp LSHFT>;
             key-positions = <16 15>;
         };
 
-        new_combo {
+        combo_rhand_shift {
+            timeout-ms = 100;
             bindings = <&kp LSHIFT>;
             key-positions = <19 20>;
         };
 
         new_combo {
+            timeout-ms = 100;
             bindings = <&kp CAPSLOCK>;
             key-positions = <15 16 19 20>;
         };
@@ -92,8 +102,8 @@
             bindings = <
    &kp ESC   &kp Q   &kp W    &kp E   &kp R     &kp T              &kp Y   &kp U      &kp I    &kp O              &kp P         &kp BSPC
    &kp TAB   &kp A   &kp S    &kp D   &kp F     &kp G              &kp H   &kp J      &kp K    &kp L  &td LS(SEMI) SEMI  &td LS(SQT) SQT
- &kp LCTRL   &kp Z   &kp X    &kp C   &kp V     &kp B              &kp N   &kp M  &kp COMMA  &kp DOT  &td LS(FSLH) FSLH         &kp LALT
-                            &kp RET   &to 1  &kp LGUI          &kp SPACE   &to 0  &kp RSHFT
+ &kp LCTRL   &kp Z   &kp X    &kp C   &kp V     &kp B              &kp N   &kp M  &kp COMMA  &kp DOT  &td LS(FSLH) FSLH         &kp LSHFT
+                            &kp RET   &to 1  &kp LGUI          &kp SPACE   &to 0  &kp LALT
             >;
         };
 
