@@ -102,8 +102,8 @@
             bindings = <
    &kp ESC   &kp Q   &kp W    &kp E   &kp R     &kp T              &kp Y   &kp U      &kp I    &kp O              &kp P         &kp BSPC
    &kp TAB   &kp A   &kp S    &kp D   &kp F     &kp G              &kp H   &kp J      &kp K    &kp L  &td LS(SEMI) SEMI  &td LS(SQT) SQT
- &kp LCTRL   &kp Z   &kp X    &kp C   &kp V     &kp B              &kp N   &kp M  &kp COMMA  &kp DOT  &td LS(FSLH) FSLH         &kp LSHFT
-                            &kp RET   &to 1  &kp LGUI          &kp SPACE   &to 0  &kp LALT
+ &kp LCTRL   &kp Z   &kp X    &kp C   &kp V     &kp B              &kp N   &kp M  &kp COMMA  &kp DOT  &td LS(FSLH) FSLH        &kp LSHFT
+                            &kp RET   &to 1  &kp LGUI          &kp SPACE   &to 0   &kp LALT
             >;
         };
 
@@ -115,10 +115,10 @@
             //                    | GUI | RSE | SPC |   | ENT |QWERTY| ALT |
 
             bindings = <
- &trans  &td LS(N1) N1  &td LS(N2) N2  &td LS(N3) N3  &td LS(N4) N4  &td LS(N5) N5          &td LS(N6) N6  &td LS(N7) N7  &td LS(N8) N8  &td LS(N9) N9  &td LS(N0) N0  &trans
- &trans       &kp BSLH       &kp AMPS       &kp PLUS      &kp MINUS      &kp EQUAL              &td GT LT  &td RBRC LBRC  &td RPAR LPAR  &td RBKT LBKT         &trans  &trans
- &trans      &kp GRAVE      &kp UNDER       &kp HASH      &kp PRCNT       &kp PIPE                 &trans         &trans         &trans         &trans         &trans  &trans
-                                              &trans          &to 2         &trans                 &trans          &to 0         &trans
+ &trans  &td LS(N1) N1  &td LS(N2) N2  &td LS(N3) N3  &td LS(N4) N4  &td LS(N5) N5           &td LS(N6) N6  &td LS(N7) N7  &td LS(N8) N8  &td LS(N9) N9  &td LS(N0) N0  &trans
+ &trans       &kp BSLH       &kp AMPS       &kp PLUS      &kp MINUS      &kp EQUAL               &td GT LT  &td RBRC LBRC  &td RPAR LPAR  &td RBKT LBKT         &trans  &trans
+ &trans      &kp GRAVE      &kp UNDER       &kp HASH      &kp PRCNT       &kp PIPE          &kp LS(PERIOD)        &kp F12         &trans         &trans         &trans  &trans
+                                              &trans          &to 2         &trans                  &trans          &to 0         &trans
             >;
         };
 
