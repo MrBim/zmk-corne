@@ -28,7 +28,7 @@
             label = "TAPDANCE_SPACE_ENTER";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&td RET SPACE;
+            bindings = <&kp SPACE>, <&td RET SPACE>;
         }
     };
 
