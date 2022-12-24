@@ -23,6 +23,13 @@
                 <&kp>,
                 <&kp>;
         };
+        td_sp_ent: tapdance_space_enter {
+            compatible = "zmk, behavior-tap-dance";
+            label = "TAPDANCE_SPACE_ENTER";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SPACE>, <&td RET SPACE;
+        }
     };
 
     combos {
@@ -103,7 +110,7 @@
    &kp ESC   &kp Q   &kp W    &kp E   &kp R     &kp T              &kp Y   &kp U      &kp I    &kp O              &kp P         &kp BSPC
    &kp TAB   &kp A   &kp S    &kp D   &kp F     &kp G              &kp H   &kp J      &kp K    &kp L  &td LS(SEMI) SEMI  &td LS(SQT) SQT
  &kp LCTRL   &kp Z   &kp X    &kp C   &kp V     &kp B              &kp N   &kp M  &kp COMMA  &kp DOT  &td LS(FSLH) FSLH        &kp LSHFT
-                            &kp RET   &to 1  &kp LGUI          &kp SPACE   &to 0   &kp LALT
+                            &kp RET   &to 1  &kp LGUI              &td_sp_ent   &to 0   &kp LALT
             >;
         };
 
@@ -124,17 +131,28 @@
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // | BTC  |     |     |     |     |     |   |     | HOME| UP  | END |     |power toggle|
-            // | BT1  |     |     |     |     |     |   |     | LFT | DWN | RGT |     |      |
-            // | BT2  |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI | LWR | SPC |   | ENT |     | ALT |
+            // |      |pref ble| bl0 | bl1 | bl2 |power|   |power| HOME| UP  | END |     |power toggle|
+            // |      |        |     |     |     |btclr|   |     | LFT | DWN | RGT |     |      |
+            // |      |        |     |     |     |     |   |     |     |     |     |     |      |
+            //                       | GUI | LWR | SPC |   | ENT |     | ALT |
 
             bindings = <
- &trans  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &ext_power EP_TOG          &trans  &kp HOME    &kp UP    &kp END  &trans  &trans
- &trans        &trans        &trans        &trans        &trans             &trans          &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
- &trans        &trans        &trans        &trans        &trans             &trans          &trans    &trans    &trans     &trans  &trans  &trans
-                                           &trans         &to 1             &trans          &trans     &to 0    &trans
+ &trans  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &ext_power EP_TOG    &ext_power EP_TOG  &kp HOME  &kp UP    &kp END  &trans  &trans
+ &trans  &trans        &trans        &trans        &trans        &bt BT_CLR           &trans             &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+ &trans  &trans        &trans        &trans        &trans        &trans               &trans             &trans    &trans     &trans  &trans  &trans
+                                     &trans         &to 1        &trans               &trans             &to 0     &trans
             >;
         };
     };
 };
+
+/*
+*
+* keys to add
+*
+* tap tap hold for enter on the space key. needs to have tapdance function added to the top.
+* mouse keys 
+* media keys for play/pause skip and volume.
+* cut copy paste undo redo vsCode shortcuts for things
+*
+*/
