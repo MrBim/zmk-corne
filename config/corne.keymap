@@ -23,7 +23,7 @@
                 <&kp>,
                 <&kp>;
         };
-        td_sp_ent: {
+        td_sp_ent: tapdance {
             compatible = "zmk, behavior-tap-dance";
             label = "TAPDANCE_SPACE_ENTER";
             #binding-cells = <0>;
