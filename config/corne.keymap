@@ -82,11 +82,17 @@
             key-positions = <19 20>;
         };
 
-        new_combo {
+        caps_lock {
             timeout-ms = <100>;
             bindings = <&kp CAPSLOCK>;
             key-positions = <15 16 19 20>;
         };
+
+        alt_combo {
+            timeout-ms = <100>;
+            bindings = <&kp LALT>;
+            key-positions = <28 29>;
+        }
     };
 
     keymap {
