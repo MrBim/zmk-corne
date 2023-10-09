@@ -92,7 +92,7 @@
             timeout-ms = <100>;
             bindings = <&kp LALT>;
             key-positions = <28 29>;
-        }
+        };
     };
 
     keymap {
