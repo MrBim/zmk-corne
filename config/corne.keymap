@@ -23,6 +23,14 @@
                 <&kp>,
                 <&kp>;
         };
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mo_tog";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+        };
     };
 
     combos {
@@ -106,10 +114,10 @@
             //                    | ENT | LWR | GUI |   | SPC |      |shift|
 
             bindings = <
-   &kp ESC      &kp Q   &kp W    &kp E   &kp R     &kp T              &kp Y      &kp U   &kp I     &kp O    &kp P                  &kp BSPC
-   &kp TAB      &kp A   &kp S    &kp D   &kp F     &kp G              &kp H      &kp J   &kp K     &kp L    &td LS(SEMI) SEMI      &td LS(SQT) SQT
-   &kp LCTRL    &kp Z   &kp X    &kp C   &kp V     &kp B              &kp N      &kp M   &kp COMMA &kp DOT  &td LS(FSLH) FSLH      &kp LSHFT
-                                 &kp RET   &to 1  &kp LGUI            &kp SPACE  &to 0   &kp LALT
+   &kp ESC      &kp Q   &kp W    &kp E   &kp R        &kp T              &kp Y      &kp U   &kp I     &kp O    &kp P                  &kp BSPC
+   &kp TAB      &kp A   &kp S    &kp D   &kp F        &kp G              &kp H      &kp J   &kp K     &kp L    &td LS(SEMI) SEMI      &td LS(SQT) SQT
+   &kp LCTRL    &kp Z   &kp X    &kp C   &kp V        &kp B              &kp N      &kp M   &kp COMMA &kp DOT  &td LS(FSLH) FSLH      &kp LSHFT
+                                 &kp RET &mo_tog 2 1  &kp LGUI            &kp SPACE  &to 0   &kp LALT
             >;
         };
 
@@ -124,7 +132,7 @@ lower_layer {
  &trans  &td LS(N1) N1       &td LS(N2) N2  &td LS(N3) N3  &td LS(N4) N4  &td LS(N5) N5           &td LS(N6) N6  &td LS(N7) N7  &td LS(N8) N8  &td LS(N9) N9  &td LS(N0) N0  &trans
  &trans  &kp BSLH            &kp AMPS       &kp PLUS       &kp MINUS      &kp EQUAL               &td GT LT      &td RBRC LBRC  &td RPAR LPAR  &td RBKT LBKT  &trans         &trans
  &trans  &td LS(GRAVE) GRAVE &kp UNDER      &kp HASH       &kp PRCNT      &kp PIPE                &kp LS(PERIOD) &kp F12        &trans         &trans         &trans         &trans
-                                            &trans         &to 2          &trans                  &trans         &to 0          &trans
+                                            &trans         &trans         &trans                  &trans         &to 0          &trans
             >;
         };
 
@@ -139,7 +147,7 @@ raise_layer {
  &trans  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &ext_power EP_ON     &trans  &kp HOME  &kp UP    &kp END    &trans     &trans
  &trans  &trans        &trans        &trans        &trans        &trans               &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans
  &trans  &trans        &trans        &trans        &trans        &trans               &trans  &trans    &trans    &trans     &trans     &trans
-                                     &trans         &to 1        &trans               &trans  &to 0     &trans
+                                     &trans        &trans        &trans               &trans  &to 0     &trans
             >;
         };
     };
