@@ -5,10 +5,10 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     behaviors {
@@ -19,9 +19,7 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
@@ -114,40 +112,49 @@
             //                    | ENT | LWR | GUI |   | SPC |      |shift|
 
             bindings = <
-   &kp ESC      &kp Q   &kp W    &kp E   &kp R        &kp T              &kp Y      &kp U   &kp I     &kp O    &kp P                  &kp BSPC
-   &kp TAB      &kp A   &kp S    &kp D   &kp F        &kp G              &kp H      &kp J   &kp K     &kp L    &td LS(SEMI) SEMI      &td LS(SQT) SQT
-   &kp LCTRL    &kp Z   &kp X    &kp C   &kp V        &kp B              &kp N      &kp M   &kp COMMA &kp DOT  &td LS(FSLH) FSLH      &kp LSHFT
-                                 &kp RET &mo_tog 2 1  &kp LGUI            &kp SPACE  &to 0   &kp LALT
+&kp ESC    &kp Q  &kp W  &kp E    &kp R        &kp T       &kp Y      &kp U        &kp I      &kp O    &kp P              &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D    &kp F        &kp G       &kp H      &kp J        &kp K      &kp L    &td LS(SEMI) SEMI  &td LS(SQT) SQT
+&kp LCTRL  &kp Z  &kp X  &kp C    &kp V        &kp B       &kp N      &kp M        &kp COMMA  &kp DOT  &td LS(FSLH) FSLH  &kp LSHFT
+                         &kp RET  &mo_tog 2 1  &kp LGUI    &kp SPACE  &mo_tog 3 0  &kp LALT
             >;
         };
 
-lower_layer {
-    // -----------------------------------------------------------------------------------------
-    // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |      | 
-    // |      |  \  |  *  |  +  |  -  |  =  |   |  <  |  {   |  (  |  [  |     |      |
-    // |      |  `  |  _  |  #  |  %  | "|" |   |  >  | f12  |     |     |     |      |
-    //                    | GUI | RSE | SPC |   | ENT |QWERTY| ALT |
+        lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |      | 
+            // |      |  \  |  *  |  +  |  -  |  =  |   |  <  |  {   |  (  |  [  |     |      |
+            // |      |  `  |  _  |  #  |  %  | "|" |   |  >  | f12  |     |     |     |      |
+            //                    | GUI | RSE | SPC |   | ENT |QWERTY| ALT |
 
             bindings = <
- &trans  &td LS(N1) N1       &td LS(N2) N2  &td LS(N3) N3  &td LS(N4) N4  &td LS(N5) N5           &td LS(N6) N6  &td LS(N7) N7  &td LS(N8) N8  &td LS(N9) N9  &td LS(N0) N0  &trans
- &trans  &kp BSLH            &kp AMPS       &kp PLUS       &kp MINUS      &kp EQUAL               &td GT LT      &td RBRC LBRC  &td RPAR LPAR  &td RBKT LBKT  &trans         &trans
- &trans  &td LS(GRAVE) GRAVE &kp UNDER      &kp HASH       &kp PRCNT      &kp PIPE                &kp LS(PERIOD) &kp F12        &trans         &trans         &trans         &trans
-                                            &trans         &trans         &trans                  &trans         &to 0          &trans
+&trans  &td LS(N1) N1        &td LS(N2) N2  &td LS(N3) N3  &td LS(N4) N4  &td LS(N5) N5    &td LS(N6) N6   &td LS(N7) N7  &td LS(N8) N8  &td LS(N9) N9  &td LS(N0) N0  &trans
+&trans  &kp BSLH             &kp AMPS       &kp PLUS       &kp MINUS      &kp EQUAL        &td GT LT       &td RBRC LBRC  &td RPAR LPAR  &td RBKT LBKT  &trans         &trans
+&trans  &td LS(GRAVE) GRAVE  &kp UNDER      &kp HASH       &kp PRCNT      &kp PIPE         &kp LS(PERIOD)  &kp F12        &trans         &trans         &trans         &trans
+                                            &trans         &trans         &trans           &trans          &to 0          &trans
             >;
         };
 
-raise_layer {
-    // -----------------------------------------------------------------------------------------
-    // |      |pref ble| bl0 | bl1 | bl2 |power|   |     | HOME| UP  | END |     |power toggle|
-    // |      |        |     |     |     |btclr|   |     | LFT | DWN | RGT |     |      |
-    // |      |        |     |     |     |     |   |     |     |     |     |     |      |
-    //                       | GUI | LWR | SPC |   | ENT |     | ALT |
+        raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // |      |pref ble| bl0 | bl1 | bl2 |power|   |     | HOME| UP  | END |     |power toggle|
+            // |      |        |     |     |     |btclr|   |     | LFT | DWN | RGT |     |      |
+            // |      |        |     |     |     |     |   |     |     |     |     |     |      |
+            //                       | GUI | LWR | SPC |   | ENT |     | ALT |
 
             bindings = <
- &trans  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &ext_power EP_ON     &trans  &kp HOME  &kp UP    &kp END    &trans     &trans
- &trans  &trans        &trans        &trans        &trans        &trans               &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans
- &trans  &trans        &trans        &trans        &trans        &trans               &trans  &trans    &trans    &trans     &trans     &trans
-                                     &trans        &trans        &trans               &trans  &to 0     &trans
+&trans  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &ext_power EP_ON    &trans  &kp HOME  &kp UP    &kp END    &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans              &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans              &trans  &trans    &trans    &trans     &trans  &trans
+                                    &trans        &trans        &trans              &trans  &to 0     &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans           &trans
             >;
         };
     };
