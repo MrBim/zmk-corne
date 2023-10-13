@@ -104,7 +104,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        alpha_layer {
             // ----------------------------------- QWERTY -------------------------------------------------
             // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -119,7 +119,7 @@
             >;
         };
 
-        lower_layer {
+        symbol_layer {
             // -----------------------------------------------------------------------------------------
             // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |      | 
             // |      |  \  |  *  |  +  |  -  |  =  |   |  <  |  {   |  (  |  [  |     |      |
@@ -134,7 +134,7 @@
             >;
         };
 
-        raise_layer {
+        direction_layer {
             // -----------------------------------------------------------------------------------------
             // |      |pref ble| bl0 | bl1 | bl2 |power|   |     | HOME| UP  | END |     |power toggle|
             // |      |        |     |     |     |btclr|   |     | LFT | DWN | RGT |     |      |
@@ -149,7 +149,7 @@
             >;
         };
 
-        layer_3 {
+        number_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
