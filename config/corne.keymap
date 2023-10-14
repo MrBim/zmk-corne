@@ -30,6 +30,7 @@
 #define NM1 5	
 #define SYS 6
 #define BT 7	
+
 / { 
     combos {
         compatible = "zmk,combos";
@@ -105,7 +106,7 @@
             flavor = "tap-preferred";
             bindings = <&sl>, <&kp>;
         };
-	td: tapdance {
+	    td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
             #binding-cells = <2>;
@@ -114,33 +115,34 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-	alpha2macro: behavior_macro_1 {
-		compatible = "zmk,behavior-macro";
-		label = "MACRO1";
-		#binding-cells = <0>;
-		bindings = < &sl AL2 >;
-	};
+	    alpha2macro: behavior_macro_1 {
+		    compatible = "zmk,behavior-macro";
+		    label = "MACRO1";
+		    #binding-cells = <0>;
+		    bindings = < &sl AL2 >;
+	    };
     };
-       keymap {
-                compatible = "zmk,keymap";
+    
+    keymap {
+        compatible = "zmk,keymap";
                 
-       		alpha1 {
-		bindings = <
-		&trans  &trans 		&hm LCTL L 	&hm LALT G 	&hm LGUI D		     &trans     &trans  &hm RGUI H 	    &hm RALT U  &hm RCTL O	&trans      &trans 
-		&trans  &hl NM1 I	&hl SM2 S	&hl SM1 R	&hl SYS T 	 	     &trans     &trans  &hl SYS N    	&hl SM1 E   &hl SM2 A 	&hl NM1 C   &trans 
-		&trans  &trans	 	&trans 		&trans 		&mt LC(LS(LALT)) SPC &trans     &trans  &alpha2macro	&trans 		&trans		&trans      &trans 
-						                &trans      &trans               &trans	    &trans  &trans          &trans 
-		>;
+        alpha1 {
+            bindings = <
+                &trans  &trans 		&hm LCTL L 	&hm LALT G 	&hm LGUI D		     &trans     &trans  &hm RGUI H 	    &hm RALT U  &hm RCTL O	&trans      &trans 
+                &trans  &hl NM1 I	&hl SM2 S	&hl SM1 R	&hl SYS T 	 	     &trans     &trans  &hl SYS N    	&hl SM1 E   &hl SM2 A 	&hl NM1 C   &trans 
+                &trans  &trans	 	&trans 		&trans 		&mt LC(LS(LALT)) SPC &trans     &trans  &alpha2macro	&trans 		&trans		&trans      &trans 
+                                                &trans      &trans               &trans	    &trans  &trans          &trans 
+            >;
 		};
-       		game {
-		bindings = <
-		&trans &trans 		&kp L 		&kp G 		&kp D	&trans &trans 		&hm RGUI H 	&hm RALT U    	&hm RCTL O	&trans  &trans 
-		&trans &kp I		&kp S		&kp R		&kp T 	&trans &trans 	 	&hl SYS N   &hl SM1 E   	&hl SM2  A 	&hl NM1 C &trans 
-		&trans &trans	 	&trans 		&trans 		&kp SPC &trans &trans 		&sl AL2		&trans 			&trans		&trans &trans 
-								            &trans	 &trans &trans &trans &trans 		&trans
-		>;
+        game {
+            bindings = <
+                &trans &trans 		&kp L 		&kp G 		&kp D	&trans &trans 		&hm RGUI H 	&hm RALT U    	&hm RCTL O	&trans  &trans 
+                &trans &kp I		&kp S		&kp R		&kp T 	&trans &trans 	 	&hl SYS N   &hl SM1 E   	&hl SM2  A 	&hl NM1 C &trans 
+                &trans &trans	 	&trans 		&trans 		&kp SPC &trans &trans 		&sl AL2		&trans 			&trans		&trans &trans 
+                                                    &trans	 &trans &trans &trans &trans 		&trans
+            >;
 		};
-       		alpha2 {
+       	alpha2 {
 		bindings = <
 		&trans &trans 	 	&kp V 		&kp W		&kp M	 	&trans &trans  	&kp F    	&kp SQT			&kp Z 		&trans &trans 
 		&trans &kp Q	 	&kp J 		&kp P		&kp K 		&trans &trans 	&kp B 		&kp DOT			&kp X		&kp Y &trans 
@@ -149,7 +151,7 @@
 		>;
 		};
 		
-       		sym1 {
+       	sym1 {
 		bindings = <
 		&trans &trans 		&kp LA(N3)  &kp LS(N3)	&kp DLLR	 &trans &trans    &kp LS(COMMA)	&kp LS(DOT)		&kp CARET	&trans &trans 
 		&trans &kp GRAVE	&kp TILDE 	&kp MINUS   &kp BSLH	 &trans &trans 	&kp LBKT	    &kp RBKT	 	&kp PIPE 	&kp SLASH &trans 
@@ -166,7 +168,6 @@
 
 		>;
 		};
-
 		num {
 		bindings = <
 		&trans &trans		&hm LCTL DOT 	&hm LALT N0	&hm LGUI N1 &trans &trans 	&hm RGUI N2 &hm RALT N3		&hm RCTL N4	&trans &trans 
@@ -175,7 +176,6 @@
 								                &trans	 	&trans &trans &trans &trans  	&trans
 		>;
 		};
-
 		sys {
 		bindings = <
 		&trans &trans		 	    &kp ESC			&kp LC(LS(TAB)) 	&kp RC(TAB)		&trans &trans     &td LG(V) LG(C) 	&kp UP 		&td Q BKSP 			        &trans &trans 
@@ -184,7 +184,6 @@
 									 		                    &trans	 	&trans &trans &trans &trans 	    &trans
 		>;
 		};
-
 		bt {
 		bindings = <
 		&trans &trans		&bt BT_PRV	&bt BT_NXT	&trans 		&trans &trans 	&trans 	&trans	&trans	&trans &trans 
@@ -193,7 +192,6 @@
 						 		            &trans		&trans &trans &trans &trans 	&trans
 		>;
 		};
-
        		alpha2cap {
 		bindings = <
 		&trans &trans 	 	&kp LS(V)	&kp LS(W)	&kp LS(M) 	 &trans &trans 	&kp LS(F)    	&trans		&kp LS(Z)	&trans &trans 
@@ -204,3 +202,5 @@
 		};
         
 	};
+
+};
