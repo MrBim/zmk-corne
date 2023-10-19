@@ -179,6 +179,7 @@
             >;
         };
 
+        direction_layer {
             bindings = <
 &trans  &trans        &trans        &trans            &trans        &trans              &collapse             &kp HOME      &kp UP    &kp END        &expand            &trans
 &trans  &trans        &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &trans              &kp RG(LEFT_BRACKET)  &kp LEFT      &kp DOWN  &kp RIGHT      &kp RIGHT_BRACKET  &trans
