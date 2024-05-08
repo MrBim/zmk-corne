@@ -99,6 +99,11 @@
             bindings = <&kp LALT>;
             key-positions = <28 29>;
         };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <6 7>;
+        };
     };
 
     macros {
@@ -196,10 +201,10 @@
 
         number_layer {
             bindings = <
-&trans  &trans  &trans  &trans         &trans         &trans    &kp LS(EQUAL)    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-&trans  &trans  &trans  &kp DELETE     &kp RS(RA(F))  &trans    &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
-&trans  &trans  &trans  &kp LS(LG(C))  &trans         &trans    &kp MINUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
-                        &trans         &trans         &trans    &trans           &trans           &trans
+&trans  &trans  &trans  &trans         &trans         &trans    &td LS(EQUAL) EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+&trans  &trans  &trans  &kp DELETE     &kp RS(RA(F))  &trans    &kp KP_NUMBER_0      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &kp LS(LG(C))  &trans         &trans    &kp MINUS            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
+                        &trans         &trans         &trans    &trans               &trans           &trans
             >;
         };
 
