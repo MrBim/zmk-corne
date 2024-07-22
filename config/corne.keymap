@@ -37,7 +37,7 @@
         combo_caps_word {
             timeout-ms = <100>;
             bindings = <&caps_word>;
-            key-positions = <17 18>;
+            key-positions = <17 18 16 19>;
         };
 
         combo_esc {
@@ -201,9 +201,9 @@
 
         number_layer {
             bindings = <
-&trans  &trans  &trans  &trans         &trans         &trans    &td LS(EQUAL) EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-&trans  &trans  &trans  &kp DELETE     &kp RS(RA(F))  &trans    &kp KP_NUMBER_0      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
-&trans  &trans  &trans  &kp LS(LG(C))  &trans         &trans    &kp MINUS            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
+&trans  &trans  &trans  &trans         &trans         &trans    &td LS(EQUAL) EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERCENT  &trans
+&trans  &trans  &trans  &kp DELETE     &kp RS(RA(F))  &trans    &kp KP_NUMBER_0      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans       &trans
+&trans  &trans  &trans  &kp LS(LG(C))  &trans         &trans    &kp MINUS            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DOT      &trans
                         &trans         &trans         &trans    &trans               &trans           &trans
             >;
         };
